@@ -46,12 +46,12 @@ namespace SportsStore.WebUI.Infrastructure
             var mock = new Mock<IProductRepository>();
             mock.Setup(x => x.Products).Returns(new List<Product>
             {
-                new Product {ProductID = 1, Name = "P1", Description = "test", Price = 5, Category = "Cat 1"},
-                new Product {ProductID = 2, Name = "P2", Description = "test", Price = 15, Category = "Cat 1"},
-                new Product {ProductID = 3, Name = "P3", Description = "test", Price = 5123, Category = "Cat 1"},
-                new Product {ProductID = 4, Name = "P4", Description = "test", Price = 35, Category = "Cat 2"},
-                new Product {ProductID = 5, Name = "P5", Description = "test", Price = 55, Category = "Cat 2"},
-                new Product {ProductID = 6, Name = "P6", Description = "test", Price = 2, Category = "Cat 2"}
+                new Product {ProductID = 1, Name = "Soccer Ball", Description = "Black and white soccer ball", Price = 5, Category = "Soccer"},
+                new Product {ProductID = 2, Name = "Soccer Flag", Description = "Thrown when players are bad", Price = 15, Category = "Soccer"},
+                new Product {ProductID = 3, Name = "Field Cone", Description = "Cone to mark boundary", Price = 5123, Category = "Soccer"},
+                new Product {ProductID = 4, Name = "Basketball", Description = "A ball", Price = 35, Category = "Basketball"},
+                new Product {ProductID = 5, Name = "Replacement Net", Description = "Medium weight, regulation size replacement net", Price = 55, Category = "Basketball"},
+                new Product {ProductID = 6, Name = "Example Product", Description = "description here...", Price = 2, Category = "Test"}
             });
             kernel.Bind<IProductRepository>().ToConstant(mock.Object);
         }
