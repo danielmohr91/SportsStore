@@ -7,25 +7,33 @@ using SportsStore.WebUI.Models;
 namespace SportsStore.WebUI.Controllers {
 
     public class CartController : Controller {
-        private IProductRepository repository;
-        private IOrderProcessor orderProcessor;
+        private IProductRepository _repository;
+        private IOrderProcessor _orderProcessor;
 
-        public CartController(IProductRepository repo, IOrderProcessor proc) {
-            repository = repo;
-            orderProcessor = proc;
+        public CartController(IProductRepository repo, IOrderProcessor processor) {
+            _repository = repo;
+            _orderProcessor = processor;
         }
 
+        public ViewResult Index(string returnUrl)
+        {
+            return View(new CartIndexViewModel {Cart = GetCart(), ReturnUrl = returnUrl});
+        }
 
-        public ViewResult Index(Cart cart, string returnUrl) {
-            return View(new CartIndexViewModel {
-                ReturnUrl = returnUrl,
-                Cart = cart
-            });
+        private Cart GetCart()
+        {
+            var cart = (Cart) Session["cart"];
+            if (cart == null)
+            {
+                cart = new Cart();
+                Session["cart"] = cart;
+            }
+            return cart;
         }
 
         public RedirectToRouteResult AddToCart(Cart cart, int productId,
                 string returnUrl) {
-            Product product = repository.Products
+            var product = _repository.Products
                 .FirstOrDefault(p => p.ProductID == productId);
 
             if (product != null) {
@@ -36,7 +44,7 @@ namespace SportsStore.WebUI.Controllers {
 
         public RedirectToRouteResult RemoveFromCart(Cart cart, int productId,
                 string returnUrl) {
-            Product product = repository.Products
+            var product = _repository.Products
                 .FirstOrDefault(p => p.ProductID == productId);
 
             if (product != null) {
@@ -55,12 +63,12 @@ namespace SportsStore.WebUI.Controllers {
 
         [HttpPost]
         public ViewResult Checkout(Cart cart, ShippingDetails shippingDetails) {
-            if (cart.Lines.Count() == 0) {
+            if (!cart.Lines.Any()) {
                 ModelState.AddModelError("", "Sorry, your cart is empty!");
             }
 
             if (ModelState.IsValid) {
-                orderProcessor.ProcessOrder(cart, shippingDetails);
+                _orderProcessor.ProcessOrder(cart, shippingDetails);
                 cart.Clear();
                 return View("Completed");
             } else {
