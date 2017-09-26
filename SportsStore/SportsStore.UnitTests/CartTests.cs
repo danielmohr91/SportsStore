@@ -4,6 +4,7 @@ using Moq;
 using SportsStore.Domain.Abstract;
 using SportsStore.Domain.Entities;
 using SportsStore.WebUI.Controllers;
+using SportsStore.WebUI.Models;
 
 namespace SportsStore.UnitTests
 {
@@ -11,11 +12,49 @@ namespace SportsStore.UnitTests
     public class CartTests
     {
         [TestMethod]
+        public void Adding_Product_To_Cart_Goes_To_Order_Screen()
+        {
+            // Arrange
+            var productId = 36;
+            var mock = CreateProductRepository(productId);
+            mock.Setup(x => x.Products).Returns(new[]
+            {
+                new Product
+                {
+                    ProductID = productId,
+                    Description = "D1",
+                    Category = "C1",
+                    Price = 123.45m,
+                    Name = "N1"
+                }
+            }.AsQueryable());
+            var cart = new Cart();
+            var cartController = new CartController(mock.Object, null);
+
+            // Act - Add product to cart
+            var result = cartController.AddToCart(cart, productId, "myUrl");
+
+            // Assert
+            Assert.AreEqual(result.RouteValues["action"], "Index");
+            Assert.AreEqual(result.RouteValues["returnUrl"], "myUrl");
+        }
+
+        [TestMethod]
         public void Calculate_Cart_Total()
         {
             // Arrange - create some test products
-            var p1 = new Product {ProductID = 1, Name = "P1", Price = 100M};
-            var p2 = new Product {ProductID = 2, Name = "P2", Price = 50M};
+            var p1 = new Product
+            {
+                ProductID = 1,
+                Name = "P1",
+                Price = 100M
+            };
+            var p2 = new Product
+            {
+                ProductID = 2,
+                Name = "P2",
+                Price = 50M
+            };
 
             // Arrange - create a new cart
             var target = new Cart();
@@ -34,8 +73,16 @@ namespace SportsStore.UnitTests
         public void Can_Add_New_Lines()
         {
             // Arrange - create some test products
-            var p1 = new Product {ProductID = 1, Name = "P1"};
-            var p2 = new Product {ProductID = 2, Name = "P2"};
+            var p1 = new Product
+            {
+                ProductID = 1,
+                Name = "P1"
+            };
+            var p2 = new Product
+            {
+                ProductID = 2,
+                Name = "P2"
+            };
 
             // Arrange - create a new cart
             var target = new Cart();
@@ -55,8 +102,16 @@ namespace SportsStore.UnitTests
         public void Can_Add_Quantity_For_Existing_Lines()
         {
             // Arrange - create some test products
-            var p1 = new Product {ProductID = 1, Name = "P1"};
-            var p2 = new Product {ProductID = 2, Name = "P2"};
+            var p1 = new Product
+            {
+                ProductID = 1,
+                Name = "P1"
+            };
+            var p2 = new Product
+            {
+                ProductID = 2,
+                Name = "P2"
+            };
 
             // Arrange - create a new cart
             var target = new Cart();
@@ -92,32 +147,6 @@ namespace SportsStore.UnitTests
             Assert.AreEqual(cart.Lines.First().Product.ProductID, productId); // Ensure product in cart is the one we just created
         }
 
-        private static Mock<IProductRepository> CreateProductRepository(int productId)
-        {
-            var mock = new Mock<IProductRepository>();
-            mock.Setup(x => x.Products).Returns(new[]
-            {
-                new Product
-                {
-                    Category = "Test Category",
-                    Description = "Test Description",
-                    Name = "Test Name",
-                    Price = 5.99m,
-                    ProductID = productId
-                }
-            }.AsQueryable());
-            return mock;
-        }
-
-        [TestMethod]
-        public void Adding_Product_To_Cart_Goes_To_Order_Screen()
-        {
-            // Arrange
-            var productId = 36;
-            var mock = CreateProductRepository(productId);
-            // TODO  - resume here on page 231
-        }
-
         [TestMethod]
         public void Can_Checkout_And_Submit_Order()
         {
@@ -145,8 +174,18 @@ namespace SportsStore.UnitTests
         public void Can_Clear_Contents()
         {
             // Arrange - create some test products
-            var p1 = new Product {ProductID = 1, Name = "P1", Price = 100M};
-            var p2 = new Product {ProductID = 2, Name = "P2", Price = 50M};
+            var p1 = new Product
+            {
+                ProductID = 1,
+                Name = "P1",
+                Price = 100M
+            };
+            var p2 = new Product
+            {
+                ProductID = 2,
+                Name = "P2",
+                Price = 50M
+            };
 
             // Arrange - create a new cart
             var target = new Cart();
@@ -166,9 +205,21 @@ namespace SportsStore.UnitTests
         public void Can_Remove_Line()
         {
             // Arrange - create some test products
-            var p1 = new Product {ProductID = 1, Name = "P1"};
-            var p2 = new Product {ProductID = 2, Name = "P2"};
-            var p3 = new Product {ProductID = 3, Name = "P3"};
+            var p1 = new Product
+            {
+                ProductID = 1,
+                Name = "P1"
+            };
+            var p2 = new Product
+            {
+                ProductID = 2,
+                Name = "P2"
+            };
+            var p3 = new Product
+            {
+                ProductID = 3,
+                Name = "P3"
+            };
 
             // Arrange - create a new cart
             var target = new Cart();
@@ -182,8 +233,23 @@ namespace SportsStore.UnitTests
             target.RemoveLine(p2);
 
             // Assert
-            Assert.AreEqual(target.Lines.Where(c => c.Product == p2).Count(), 0);
+            Assert.AreEqual(target.Lines.Count(c => c.Product == p2), 0);
             Assert.AreEqual(target.Lines.Count(), 2);
+        }
+
+        [TestMethod]
+        public void Can_View_Cart_Contents()
+        {
+            // Arrange
+            var cart = new Cart();
+            var cartController = new CartController(null, null);
+
+            // Act - call the index action method
+            var result = (CartIndexViewModel) cartController.Index("myUrl").ViewData.Model; // todo - add cart to Index Method... right now using viewdata instead... :( Badnewss....
+
+            // Assert
+            Assert.AreSame(result.Cart, cart);
+            Assert.AreEqual(result.ReturnUrl, "myUrl");
         }
 
         //[TestMethod]
@@ -296,6 +362,23 @@ namespace SportsStore.UnitTests
             Assert.AreEqual("", result.ViewName);
             // Assert - check that I am passing an invalid model to the view
             Assert.AreEqual(false, result.ViewData.ModelState.IsValid);
+        }
+
+        private static Mock<IProductRepository> CreateProductRepository(int productId)
+        {
+            var mock = new Mock<IProductRepository>();
+            mock.Setup(x => x.Products).Returns(new[]
+            {
+                new Product
+                {
+                    Category = "Test Category",
+                    Description = "Test Description",
+                    Name = "Test Name",
+                    Price = 5.99m,
+                    ProductID = productId
+                }
+            }.AsQueryable());
+            return mock;
         }
     }
 }
