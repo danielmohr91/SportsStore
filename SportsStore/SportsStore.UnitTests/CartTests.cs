@@ -245,8 +245,8 @@ namespace SportsStore.UnitTests
             var cartController = new CartController(null, null);
 
             // Act - call the index action method
-            var result = (CartIndexViewModel) cartController.Index("myUrl").ViewData.Model; // todo - add cart to Index Method... right now using viewdata instead... :( Badnewss....
-
+            var result = (CartIndexViewModel) cartController.Index(cart, "myUrl").ViewData.Model; 
+            
             // Assert
             Assert.AreSame(result.Cart, cart);
             Assert.AreEqual(result.ReturnUrl, "myUrl");
