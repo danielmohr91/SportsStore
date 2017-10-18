@@ -9,49 +9,61 @@
         <link href="~/Content/ErrorStyles.css" rel="stylesheet" />*@
 }
 
-<h2>Product Administration</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Description)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Price)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Category)
-        </th>
-        <th></th>
-    </tr>
+@* TODO - this renders. Resume on page 283 adding in edit / delete, etc... *@
 
-    @foreach (var item in Model)
-    {
+<div class="panel-heading">
+    <h2>Product Administration</h2>
+</div>
+
+<div class="panel-body">
+    <table class="table table-striped table-condensed table-bordered">
         <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Price)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Category)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.ProductID }) |
-                @Html.ActionLink("Details", "Details", new { id = item.ProductID }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.ProductID })
-            </td>
+            <th class="text-center">
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th class="text-center">
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th class="text-center">
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th class="text-center">
+                @Html.DisplayNameFor(model => model.Category)
+            </th>
+            <th class="text-center">Actions</th>
         </tr>
-    }
 
-</table>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td class="text-left">
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td class="text-right">
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td class="text-right">
+                    @Html.DisplayFor(modelItem => item.Category)
+                </td>
+                <td class="text-center">
+                    @*@Html.ActionLink("Edit", "Edit", new { id = item.ProductID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.ProductID }) |*@
+                    @*  @Html.ActionLink("Delete", "Delete", new { id = item.ProductID })*@
+                    @using (@Html.BeginForm("Delete", "Admin"))
+                    {
+                        @Html.Hidden("ProductID", item.ProductID)
+                        <input type="submit" class="btn btn-default btn-xs" value="Delete" />
+                    }
+                </td>
+            </tr>
+        }
+
+    </table>
+    <div class="panel-footer">
+        @Html.ActionLink("Add  new product", "Create", null, new {@class="btn btn-default"})
+    </div>
+    </div>
