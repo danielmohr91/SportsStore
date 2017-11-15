@@ -1,0 +1,331 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="MvcDemo.Dal.EntityModels.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="MvcDemoDalEntityModelsStoreContainer">
+          <EntitySet Name="DocFiles" EntityType="MvcDemo.Dal.EntityModels.Store.DocFiles" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Documents" EntityType="MvcDemo.Dal.EntityModels.Store.Documents" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="FileVersions" EntityType="MvcDemo.Dal.EntityModels.Store.FileVersions" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="RelatedDocuments" EntityType="MvcDemo.Dal.EntityModels.Store.RelatedDocuments" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_Files_Documents" Association="MvcDemo.Dal.EntityModels.Store.FK_Files_Documents">
+            <End Role="Documents" EntitySet="Documents" />
+            <End Role="DocFiles" EntitySet="DocFiles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FileVersions_Files" Association="MvcDemo.Dal.EntityModels.Store.FK_FileVersions_Files">
+            <End Role="DocFiles" EntitySet="DocFiles" />
+            <End Role="FileVersions" EntitySet="FileVersions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RelatedDocuments_Documents" Association="MvcDemo.Dal.EntityModels.Store.FK_RelatedDocuments_Documents">
+            <End Role="Documents" EntitySet="Documents" />
+            <End Role="RelatedDocuments" EntitySet="RelatedDocuments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RelatedDocuments_Documents1" Association="MvcDemo.Dal.EntityModels.Store.FK_RelatedDocuments_Documents1">
+            <End Role="Documents" EntitySet="Documents" />
+            <End Role="RelatedDocuments" EntitySet="RelatedDocuments" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="DocFiles">
+          <Key>
+            <PropertyRef Name="FileId" />
+          </Key>
+          <Property Name="FileId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="DocumentId" Type="bigint" Nullable="false" />
+          <Property Name="DocName" Type="varchar" MaxLength="50" />
+          <Property Name="Sequence" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Documents">
+          <Key>
+            <PropertyRef Name="DocumentId" />
+          </Key>
+          <Property Name="DocumentId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UpdateDate" Type="datetime" Nullable="false" />
+          <Property Name="UpdatedById" Type="bigint" />
+          <Property Name="DocumentName" Type="varchar" Nullable="false" MaxLength="80" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="OwnerName" Type="varchar" MaxLength="50" />
+          <Property Name="Description" Type="varchar" MaxLength="250" />
+          <Property Name="Keywords" Type="varchar" Nullable="false" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="FileVersions">
+          <Key>
+            <PropertyRef Name="FileVersionId" />
+          </Key>
+          <Property Name="FileVersionId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="FileId" Type="bigint" Nullable="false" />
+          <Property Name="Path" Type="varchar" Nullable="false" MaxLength="120" />
+          <Property Name="Version" Type="int" Nullable="false" />
+          <Property Name="Comment" Type="varchar" MaxLength="150" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="AddedDate" Type="datetime" Nullable="false" />
+          <Property Name="AddedBy" Type="int" />
+          <Property Name="AddedByName" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="RelatedDocuments">
+          <Key>
+            <PropertyRef Name="RelatedDocumentId" />
+          </Key>
+          <Property Name="RelatedDocumentId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MasterDocumentId" Type="bigint" Nullable="false" />
+          <Property Name="ChildDocumentId" Type="bigint" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Files_Documents">
+          <End Role="Documents" Type="MvcDemo.Dal.EntityModels.Store.Documents" Multiplicity="1" />
+          <End Role="DocFiles" Type="MvcDemo.Dal.EntityModels.Store.DocFiles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Documents">
+              <PropertyRef Name="DocumentId" />
+            </Principal>
+            <Dependent Role="DocFiles">
+              <PropertyRef Name="DocumentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FileVersions_Files">
+          <End Role="DocFiles" Type="MvcDemo.Dal.EntityModels.Store.DocFiles" Multiplicity="1" />
+          <End Role="FileVersions" Type="MvcDemo.Dal.EntityModels.Store.FileVersions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DocFiles">
+              <PropertyRef Name="FileId" />
+            </Principal>
+            <Dependent Role="FileVersions">
+              <PropertyRef Name="FileId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RelatedDocuments_Documents">
+          <End Role="Documents" Type="MvcDemo.Dal.EntityModels.Store.Documents" Multiplicity="1" />
+          <End Role="RelatedDocuments" Type="MvcDemo.Dal.EntityModels.Store.RelatedDocuments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Documents">
+              <PropertyRef Name="DocumentId" />
+            </Principal>
+            <Dependent Role="RelatedDocuments">
+              <PropertyRef Name="MasterDocumentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RelatedDocuments_Documents1">
+          <End Role="Documents" Type="MvcDemo.Dal.EntityModels.Store.Documents" Multiplicity="1" />
+          <End Role="RelatedDocuments" Type="MvcDemo.Dal.EntityModels.Store.RelatedDocuments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Documents">
+              <PropertyRef Name="DocumentId" />
+            </Principal>
+            <Dependent Role="RelatedDocuments">
+              <PropertyRef Name="ChildDocumentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MvcDemo.Dal.EntityModels" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="DmsEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="DocFiles" EntityType="MvcDemo.Dal.EntityModels.DocFile" />
+          <EntitySet Name="Documents" EntityType="MvcDemo.Dal.EntityModels.Document" />
+          <EntitySet Name="FileVersions" EntityType="MvcDemo.Dal.EntityModels.FileVersion" />
+          <EntitySet Name="RelatedDocuments" EntityType="MvcDemo.Dal.EntityModels.RelatedDocument" />
+          <AssociationSet Name="FK_Files_Documents" Association="MvcDemo.Dal.EntityModels.FK_Files_Documents">
+            <End Role="Documents" EntitySet="Documents" />
+            <End Role="DocFiles" EntitySet="DocFiles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FileVersions_Files" Association="MvcDemo.Dal.EntityModels.FK_FileVersions_Files">
+            <End Role="DocFiles" EntitySet="DocFiles" />
+            <End Role="FileVersions" EntitySet="FileVersions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RelatedDocuments_Documents" Association="MvcDemo.Dal.EntityModels.FK_RelatedDocuments_Documents">
+            <End Role="Documents" EntitySet="Documents" />
+            <End Role="RelatedDocuments" EntitySet="RelatedDocuments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RelatedDocuments_Documents1" Association="MvcDemo.Dal.EntityModels.FK_RelatedDocuments_Documents1">
+            <End Role="Documents" EntitySet="Documents" />
+            <End Role="RelatedDocuments" EntitySet="RelatedDocuments" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="DocFile">
+          <Key>
+            <PropertyRef Name="FileId" />
+          </Key>
+          <Property Name="FileId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DocumentId" Type="Int64" Nullable="false" />
+          <Property Name="DocName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Sequence" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Document" Relationship="MvcDemo.Dal.EntityModels.FK_Files_Documents" FromRole="DocFiles" ToRole="Documents" />
+          <NavigationProperty Name="FileVersions" Relationship="MvcDemo.Dal.EntityModels.FK_FileVersions_Files" FromRole="DocFiles" ToRole="FileVersions" />
+        </EntityType>
+        <EntityType Name="Document">
+          <Key>
+            <PropertyRef Name="DocumentId" />
+          </Key>
+          <Property Name="DocumentId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UpdateDate" Type="DateTime" Nullable="false" />
+          <Property Name="UpdatedById" Type="Int64" />
+          <Property Name="DocumentName" Type="String" Nullable="false" MaxLength="80" Unicode="false" FixedLength="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="OwnerName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+          <Property Name="Keywords" Type="String" Nullable="false" MaxLength="250" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="DocFiles" Relationship="MvcDemo.Dal.EntityModels.FK_Files_Documents" FromRole="Documents" ToRole="DocFiles" />
+          <NavigationProperty Name="RelatedDocuments" Relationship="MvcDemo.Dal.EntityModels.FK_RelatedDocuments_Documents" FromRole="Documents" ToRole="RelatedDocuments" />
+          <NavigationProperty Name="RelatedDocuments1" Relationship="MvcDemo.Dal.EntityModels.FK_RelatedDocuments_Documents1" FromRole="Documents" ToRole="RelatedDocuments" />
+        </EntityType>
+        <EntityType Name="FileVersion">
+          <Key>
+            <PropertyRef Name="FileVersionId" />
+          </Key>
+          <Property Name="FileVersionId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FileId" Type="Int64" Nullable="false" />
+          <Property Name="Path" Type="String" Nullable="false" MaxLength="120" Unicode="false" FixedLength="false" />
+          <Property Name="Version" Type="Int32" Nullable="false" />
+          <Property Name="Comment" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="AddedDate" Type="DateTime" Nullable="false" />
+          <Property Name="AddedBy" Type="Int32" />
+          <Property Name="AddedByName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="DocFile" Relationship="MvcDemo.Dal.EntityModels.FK_FileVersions_Files" FromRole="FileVersions" ToRole="DocFiles" />
+        </EntityType>
+        <EntityType Name="RelatedDocument">
+          <Key>
+            <PropertyRef Name="RelatedDocumentId" />
+          </Key>
+          <Property Name="RelatedDocumentId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MasterDocumentId" Type="Int64" Nullable="false" />
+          <Property Name="ChildDocumentId" Type="Int64" Nullable="false" />
+          <NavigationProperty Name="Document" Relationship="MvcDemo.Dal.EntityModels.FK_RelatedDocuments_Documents" FromRole="RelatedDocuments" ToRole="Documents" />
+          <NavigationProperty Name="Document1" Relationship="MvcDemo.Dal.EntityModels.FK_RelatedDocuments_Documents1" FromRole="RelatedDocuments" ToRole="Documents" />
+        </EntityType>
+        <Association Name="FK_Files_Documents">
+          <End Role="Documents" Type="MvcDemo.Dal.EntityModels.Document" Multiplicity="1" />
+          <End Role="DocFiles" Type="MvcDemo.Dal.EntityModels.DocFile" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Documents">
+              <PropertyRef Name="DocumentId" />
+            </Principal>
+            <Dependent Role="DocFiles">
+              <PropertyRef Name="DocumentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FileVersions_Files">
+          <End Role="DocFiles" Type="MvcDemo.Dal.EntityModels.DocFile" Multiplicity="1" />
+          <End Role="FileVersions" Type="MvcDemo.Dal.EntityModels.FileVersion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DocFiles">
+              <PropertyRef Name="FileId" />
+            </Principal>
+            <Dependent Role="FileVersions">
+              <PropertyRef Name="FileId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RelatedDocuments_Documents">
+          <End Role="Documents" Type="MvcDemo.Dal.EntityModels.Document" Multiplicity="1" />
+          <End Role="RelatedDocuments" Type="MvcDemo.Dal.EntityModels.RelatedDocument" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Documents">
+              <PropertyRef Name="DocumentId" />
+            </Principal>
+            <Dependent Role="RelatedDocuments">
+              <PropertyRef Name="MasterDocumentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RelatedDocuments_Documents1">
+          <End Role="Documents" Type="MvcDemo.Dal.EntityModels.Document" Multiplicity="1" />
+          <End Role="RelatedDocuments" Type="MvcDemo.Dal.EntityModels.RelatedDocument" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Documents">
+              <PropertyRef Name="DocumentId" />
+            </Principal>
+            <Dependent Role="RelatedDocuments">
+              <PropertyRef Name="ChildDocumentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MvcDemoDalEntityModelsStoreContainer" CdmEntityContainer="DmsEntities">
+          <EntitySetMapping Name="DocFiles"><EntityTypeMapping TypeName="MvcDemo.Dal.EntityModels.DocFile"><MappingFragment StoreEntitySet="DocFiles">
+            <ScalarProperty Name="FileId" ColumnName="FileId" />
+            <ScalarProperty Name="DocumentId" ColumnName="DocumentId" />
+            <ScalarProperty Name="DocName" ColumnName="DocName" />
+            <ScalarProperty Name="Sequence" ColumnName="Sequence" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Documents"><EntityTypeMapping TypeName="MvcDemo.Dal.EntityModels.Document"><MappingFragment StoreEntitySet="Documents">
+            <ScalarProperty Name="DocumentId" ColumnName="DocumentId" />
+            <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+            <ScalarProperty Name="UpdatedById" ColumnName="UpdatedById" />
+            <ScalarProperty Name="DocumentName" ColumnName="DocumentName" />
+            <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+            <ScalarProperty Name="OwnerName" ColumnName="OwnerName" />
+            <ScalarProperty Name="Description" ColumnName="Description" />
+            <ScalarProperty Name="Keywords" ColumnName="Keywords" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="FileVersions"><EntityTypeMapping TypeName="MvcDemo.Dal.EntityModels.FileVersion"><MappingFragment StoreEntitySet="FileVersions">
+            <ScalarProperty Name="FileVersionId" ColumnName="FileVersionId" />
+            <ScalarProperty Name="FileId" ColumnName="FileId" />
+            <ScalarProperty Name="Path" ColumnName="Path" />
+            <ScalarProperty Name="Version" ColumnName="Version" />
+            <ScalarProperty Name="Comment" ColumnName="Comment" />
+            <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+            <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+            <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+            <ScalarProperty Name="AddedByName" ColumnName="AddedByName" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="RelatedDocuments"><EntityTypeMapping TypeName="MvcDemo.Dal.EntityModels.RelatedDocument"><MappingFragment StoreEntitySet="RelatedDocuments">
+            <ScalarProperty Name="RelatedDocumentId" ColumnName="RelatedDocumentId" />
+            <ScalarProperty Name="MasterDocumentId" ColumnName="MasterDocumentId" />
+            <ScalarProperty Name="ChildDocumentId" ColumnName="ChildDocumentId" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="DmsModel" ZoomLevel="74">
+        <EntityTypeShape EntityType="MvcDemo.Dal.EntityModels.DocFile" Width="1.5" PointX="3" PointY="1.5" Height="2.1725878906249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="MvcDemo.Dal.EntityModels.Document" Width="1.5" PointX="0.75" PointY="2.375" Height="3.1340950520833331" IsExpanded="true" />
+        <EntityTypeShape EntityType="MvcDemo.Dal.EntityModels.FileVersion" Width="1.5" PointX="5.25" PointY="1.125" Height="2.9417936197916656" IsExpanded="true" />
+        <EntityTypeShape EntityType="MvcDemo.Dal.EntityModels.RelatedDocument" Width="1.5" PointX="3" PointY="4.75" Height="1.9802864583333335" IsExpanded="true" />
+        <AssociationConnector Association="MvcDemo.Dal.EntityModels.FK_Files_Documents" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="3.0237939453125" />
+          <ConnectorPoint PointX="3" PointY="3.0237939453125" />
+        </AssociationConnector>
+        <AssociationConnector Association="MvcDemo.Dal.EntityModels.FK_FileVersions_Files" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="2.5862939453125" />
+          <ConnectorPoint PointX="5.25" PointY="2.5862939453125" />
+        </AssociationConnector>
+        <AssociationConnector Association="MvcDemo.Dal.EntityModels.FK_RelatedDocuments_Documents" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="5.1295475260416667" />
+          <ConnectorPoint PointX="3" PointY="5.1295475260416667" />
+        </AssociationConnector>
+        <AssociationConnector Association="MvcDemo.Dal.EntityModels.FK_RelatedDocuments_Documents1" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="4.8772737630208329" />
+          <ConnectorPoint PointX="3" PointY="4.8772737630208329" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,34 @@
+C:\Users\niroshl\documents\visual studio 2010\Projects\MvcDemo\MvcDeme.Core\bin\Debug\MvcDemo.Core.dll
+C:\Users\niroshl\documents\visual studio 2010\Projects\MvcDemo\MvcDeme.Core\bin\Debug\MvcDemo.Core.pdb
+C:\Users\niroshl\documents\visual studio 2010\Projects\MvcDemo\MvcDeme.Core\bin\Debug\AutoMapper.dll
+C:\Users\niroshl\documents\visual studio 2010\Projects\MvcDemo\MvcDeme.Core\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\niroshl\documents\visual studio 2010\Projects\MvcDemo\MvcDeme.Core\bin\Debug\MvcDemo.Common.dll
+C:\Users\niroshl\documents\visual studio 2010\Projects\MvcDemo\MvcDeme.Core\bin\Debug\MvcDemo.Dal.dll
+C:\Users\niroshl\documents\visual studio 2010\Projects\MvcDemo\MvcDeme.Core\bin\Debug\log4net.dll
+C:\Users\niroshl\documents\visual studio 2010\Projects\MvcDemo\MvcDeme.Core\bin\Debug\MvcDemo.Common.pdb
+C:\Users\niroshl\documents\visual studio 2010\Projects\MvcDemo\MvcDeme.Core\bin\Debug\MvcDemo.Dal.pdb
+C:\Users\niroshl\documents\visual studio 2010\Projects\MvcDemo\MvcDeme.Core\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\niroshl\documents\visual studio 2010\Projects\MvcDemo\MvcDeme.Core\obj\Debug\MvcDemo.Core.dll
+C:\Users\niroshl\documents\visual studio 2010\Projects\MvcDemo\MvcDeme.Core\obj\Debug\MvcDemo.Core.pdb
+D:\MvcDemo\MvcDemo\MvcDeme.Core\obj\Debug\ResolveAssemblyReference.cache
+D:\MvcDemo\MvcDemo\MvcDeme.Core\bin\Debug\MvcDemo.Core.dll
+D:\MvcDemo\MvcDemo\MvcDeme.Core\bin\Debug\MvcDemo.Core.pdb
+D:\MvcDemo\MvcDemo\MvcDeme.Core\bin\Debug\AutoMapper.dll
+D:\MvcDemo\MvcDemo\MvcDeme.Core\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+D:\MvcDemo\MvcDemo\MvcDeme.Core\bin\Debug\MvcDemo.Common.dll
+D:\MvcDemo\MvcDemo\MvcDeme.Core\bin\Debug\MvcDemo.Dal.dll
+D:\MvcDemo\MvcDemo\MvcDeme.Core\bin\Debug\log4net.dll
+D:\MvcDemo\MvcDemo\MvcDeme.Core\bin\Debug\MvcDemo.Common.pdb
+D:\MvcDemo\MvcDemo\MvcDeme.Core\bin\Debug\MvcDemo.Dal.pdb
+D:\MvcDemo\MvcDemo\MvcDeme.Core\obj\Debug\MvcDemo.Core.dll
+D:\MvcDemo\MvcDemo\MvcDeme.Core\obj\Debug\MvcDemo.Core.pdb
+C:\Users\dmohr\Documents\Personal\Sports Store Ecommerce\MvcDemo\MvcDeme.Core\bin\Debug\MvcDemo.Core.dll
+C:\Users\dmohr\Documents\Personal\Sports Store Ecommerce\MvcDemo\MvcDeme.Core\bin\Debug\MvcDemo.Core.pdb
+C:\Users\dmohr\Documents\Personal\Sports Store Ecommerce\MvcDemo\MvcDeme.Core\bin\Debug\MvcDemo.Common.dll
+C:\Users\dmohr\Documents\Personal\Sports Store Ecommerce\MvcDemo\MvcDeme.Core\bin\Debug\MvcDemo.Dal.dll
+C:\Users\dmohr\Documents\Personal\Sports Store Ecommerce\MvcDemo\MvcDeme.Core\bin\Debug\log4net.dll
+C:\Users\dmohr\Documents\Personal\Sports Store Ecommerce\MvcDemo\MvcDeme.Core\bin\Debug\MvcDemo.Common.pdb
+C:\Users\dmohr\Documents\Personal\Sports Store Ecommerce\MvcDemo\MvcDeme.Core\bin\Debug\MvcDemo.Dal.pdb
+C:\Users\dmohr\Documents\Personal\Sports Store Ecommerce\MvcDemo\MvcDeme.Core\obj\Debug\MvcDemo.Core.csprojResolveAssemblyReference.cache
+C:\Users\dmohr\Documents\Personal\Sports Store Ecommerce\MvcDemo\MvcDeme.Core\obj\Debug\MvcDemo.Core.dll
+C:\Users\dmohr\Documents\Personal\Sports Store Ecommerce\MvcDemo\MvcDeme.Core\obj\Debug\MvcDemo.Core.pdb

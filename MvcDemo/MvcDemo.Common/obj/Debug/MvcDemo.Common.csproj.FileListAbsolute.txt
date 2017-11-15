@@ -1,0 +1,19 @@
+C:\Users\niroshl\documents\visual studio 2010\Projects\MvcDemo\MvcDemo.Common\bin\Debug\MvcDemo.Common.dll
+C:\Users\niroshl\documents\visual studio 2010\Projects\MvcDemo\MvcDemo.Common\bin\Debug\MvcDemo.Common.pdb
+C:\Users\niroshl\documents\visual studio 2010\Projects\MvcDemo\MvcDemo.Common\bin\Debug\AutoMapper.dll
+C:\Users\niroshl\documents\visual studio 2010\Projects\MvcDemo\MvcDemo.Common\bin\Debug\log4net.dll
+C:\Users\niroshl\documents\visual studio 2010\Projects\MvcDemo\MvcDemo.Common\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\niroshl\documents\visual studio 2010\Projects\MvcDemo\MvcDemo.Common\obj\Debug\MvcDemo.Common.dll
+C:\Users\niroshl\documents\visual studio 2010\Projects\MvcDemo\MvcDemo.Common\obj\Debug\MvcDemo.Common.pdb
+D:\MvcDemo\MvcDemo\MvcDemo.Common\bin\Debug\MvcDemo.Common.dll
+D:\MvcDemo\MvcDemo\MvcDemo.Common\bin\Debug\MvcDemo.Common.pdb
+D:\MvcDemo\MvcDemo\MvcDemo.Common\bin\Debug\AutoMapper.dll
+D:\MvcDemo\MvcDemo\MvcDemo.Common\bin\Debug\log4net.dll
+D:\MvcDemo\MvcDemo\MvcDemo.Common\obj\Debug\ResolveAssemblyReference.cache
+D:\MvcDemo\MvcDemo\MvcDemo.Common\obj\Debug\MvcDemo.Common.dll
+D:\MvcDemo\MvcDemo\MvcDemo.Common\obj\Debug\MvcDemo.Common.pdb
+C:\Users\dmohr\Documents\Personal\Sports Store Ecommerce\MvcDemo\MvcDemo.Common\bin\Debug\MvcDemo.Common.dll
+C:\Users\dmohr\Documents\Personal\Sports Store Ecommerce\MvcDemo\MvcDemo.Common\bin\Debug\MvcDemo.Common.pdb
+C:\Users\dmohr\Documents\Personal\Sports Store Ecommerce\MvcDemo\MvcDemo.Common\obj\Debug\MvcDemo.Common.csprojResolveAssemblyReference.cache
+C:\Users\dmohr\Documents\Personal\Sports Store Ecommerce\MvcDemo\MvcDemo.Common\obj\Debug\MvcDemo.Common.dll
+C:\Users\dmohr\Documents\Personal\Sports Store Ecommerce\MvcDemo\MvcDemo.Common\obj\Debug\MvcDemo.Common.pdb

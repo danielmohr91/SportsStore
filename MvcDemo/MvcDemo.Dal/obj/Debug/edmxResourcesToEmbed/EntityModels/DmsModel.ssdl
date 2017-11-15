@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MvcDemo.Dal.EntityModels.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="MvcDemoDalEntityModelsStoreContainer">
+    <EntitySet Name="DocFiles" EntityType="MvcDemo.Dal.EntityModels.Store.DocFiles" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Documents" EntityType="MvcDemo.Dal.EntityModels.Store.Documents" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="FileVersions" EntityType="MvcDemo.Dal.EntityModels.Store.FileVersions" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RelatedDocuments" EntityType="MvcDemo.Dal.EntityModels.Store.RelatedDocuments" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_Files_Documents" Association="MvcDemo.Dal.EntityModels.Store.FK_Files_Documents">
+      <End Role="Documents" EntitySet="Documents" />
+      <End Role="DocFiles" EntitySet="DocFiles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FileVersions_Files" Association="MvcDemo.Dal.EntityModels.Store.FK_FileVersions_Files">
+      <End Role="DocFiles" EntitySet="DocFiles" />
+      <End Role="FileVersions" EntitySet="FileVersions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RelatedDocuments_Documents" Association="MvcDemo.Dal.EntityModels.Store.FK_RelatedDocuments_Documents">
+      <End Role="Documents" EntitySet="Documents" />
+      <End Role="RelatedDocuments" EntitySet="RelatedDocuments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RelatedDocuments_Documents1" Association="MvcDemo.Dal.EntityModels.Store.FK_RelatedDocuments_Documents1">
+      <End Role="Documents" EntitySet="Documents" />
+      <End Role="RelatedDocuments" EntitySet="RelatedDocuments" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="DocFiles">
+    <Key>
+      <PropertyRef Name="FileId" />
+    </Key>
+    <Property Name="FileId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DocumentId" Type="bigint" Nullable="false" />
+    <Property Name="DocName" Type="varchar" MaxLength="50" />
+    <Property Name="Sequence" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Documents">
+    <Key>
+      <PropertyRef Name="DocumentId" />
+    </Key>
+    <Property Name="DocumentId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UpdateDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedById" Type="bigint" />
+    <Property Name="DocumentName" Type="varchar" Nullable="false" MaxLength="80" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="OwnerName" Type="varchar" MaxLength="50" />
+    <Property Name="Description" Type="varchar" MaxLength="250" />
+    <Property Name="Keywords" Type="varchar" Nullable="false" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="FileVersions">
+    <Key>
+      <PropertyRef Name="FileVersionId" />
+    </Key>
+    <Property Name="FileVersionId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="FileId" Type="bigint" Nullable="false" />
+    <Property Name="Path" Type="varchar" Nullable="false" MaxLength="120" />
+    <Property Name="Version" Type="int" Nullable="false" />
+    <Property Name="Comment" Type="varchar" MaxLength="150" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="AddedDate" Type="datetime" Nullable="false" />
+    <Property Name="AddedBy" Type="int" />
+    <Property Name="AddedByName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="RelatedDocuments">
+    <Key>
+      <PropertyRef Name="RelatedDocumentId" />
+    </Key>
+    <Property Name="RelatedDocumentId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MasterDocumentId" Type="bigint" Nullable="false" />
+    <Property Name="ChildDocumentId" Type="bigint" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Files_Documents">
+    <End Role="Documents" Type="MvcDemo.Dal.EntityModels.Store.Documents" Multiplicity="1" />
+    <End Role="DocFiles" Type="MvcDemo.Dal.EntityModels.Store.DocFiles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Documents">
+        <PropertyRef Name="DocumentId" />
+      </Principal>
+      <Dependent Role="DocFiles">
+        <PropertyRef Name="DocumentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FileVersions_Files">
+    <End Role="DocFiles" Type="MvcDemo.Dal.EntityModels.Store.DocFiles" Multiplicity="1" />
+    <End Role="FileVersions" Type="MvcDemo.Dal.EntityModels.Store.FileVersions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DocFiles">
+        <PropertyRef Name="FileId" />
+      </Principal>
+      <Dependent Role="FileVersions">
+        <PropertyRef Name="FileId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RelatedDocuments_Documents">
+    <End Role="Documents" Type="MvcDemo.Dal.EntityModels.Store.Documents" Multiplicity="1" />
+    <End Role="RelatedDocuments" Type="MvcDemo.Dal.EntityModels.Store.RelatedDocuments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Documents">
+        <PropertyRef Name="DocumentId" />
+      </Principal>
+      <Dependent Role="RelatedDocuments">
+        <PropertyRef Name="MasterDocumentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RelatedDocuments_Documents1">
+    <End Role="Documents" Type="MvcDemo.Dal.EntityModels.Store.Documents" Multiplicity="1" />
+    <End Role="RelatedDocuments" Type="MvcDemo.Dal.EntityModels.Store.RelatedDocuments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Documents">
+        <PropertyRef Name="DocumentId" />
+      </Principal>
+      <Dependent Role="RelatedDocuments">
+        <PropertyRef Name="ChildDocumentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

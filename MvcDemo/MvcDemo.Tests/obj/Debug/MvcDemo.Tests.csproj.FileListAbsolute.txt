@@ -1,0 +1,43 @@
+c:\users\niroshl\documents\visual studio 2010\Projects\MvcDemo\MvcDemo.Tests\bin\Debug\MvcDemo.Tests.dll.config
+c:\users\niroshl\documents\visual studio 2010\Projects\MvcDemo\MvcDemo.Tests\bin\Debug\MvcDemo.Tests.dll
+c:\users\niroshl\documents\visual studio 2010\Projects\MvcDemo\MvcDemo.Tests\bin\Debug\MvcDemo.Tests.pdb
+c:\users\niroshl\documents\visual studio 2010\Projects\MvcDemo\MvcDemo.Tests\bin\Debug\MvcDemo.dll
+c:\users\niroshl\documents\visual studio 2010\Projects\MvcDemo\MvcDemo.Tests\bin\Debug\MvcDemo.pdb
+c:\users\niroshl\documents\visual studio 2010\Projects\MvcDemo\MvcDemo.Tests\obj\Debug\ResolveAssemblyReference.cache
+c:\users\niroshl\documents\visual studio 2010\Projects\MvcDemo\MvcDemo.Tests\obj\Debug\MvcDemo.Tests.dll
+c:\users\niroshl\documents\visual studio 2010\Projects\MvcDemo\MvcDemo.Tests\obj\Debug\MvcDemo.Tests.pdb
+C:\Users\niroshl\documents\visual studio 2010\Projects\MvcDemo\MvcDemo.Tests\bin\Debug\MvcDemo.Core.dll
+C:\Users\niroshl\documents\visual studio 2010\Projects\MvcDemo\MvcDemo.Tests\bin\Debug\MvcDemo.Common.dll
+C:\Users\niroshl\documents\visual studio 2010\Projects\MvcDemo\MvcDemo.Tests\bin\Debug\MvcDemo.Dal.dll
+C:\Users\niroshl\documents\visual studio 2010\Projects\MvcDemo\MvcDemo.Tests\bin\Debug\AutoMapper.dll
+C:\Users\niroshl\documents\visual studio 2010\Projects\MvcDemo\MvcDemo.Tests\bin\Debug\log4net.dll
+C:\Users\niroshl\documents\visual studio 2010\Projects\MvcDemo\MvcDemo.Tests\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\niroshl\documents\visual studio 2010\Projects\MvcDemo\MvcDemo.Tests\bin\Debug\MvcDemo.Core.pdb
+C:\Users\niroshl\documents\visual studio 2010\Projects\MvcDemo\MvcDemo.Tests\bin\Debug\MvcDemo.Common.pdb
+C:\Users\niroshl\documents\visual studio 2010\Projects\MvcDemo\MvcDemo.Tests\bin\Debug\MvcDemo.Dal.pdb
+C:\Users\niroshl\documents\visual studio 2010\Projects\MvcDemo\MvcDemo.Tests\bin\Debug\Microsoft.Practices.Unity.dll
+C:\Users\niroshl\documents\visual studio 2010\Projects\MvcDemo\MvcDemo.Tests\bin\Debug\Microsoft.Practices.Unity.pdb
+C:\Users\niroshl\documents\visual studio 2010\Projects\MvcDemo\MvcDemo.Tests\bin\Debug\Microsoft.Practices.Unity.xml
+D:\MvcDemo\MvcDemo\MvcDemo.Tests\bin\Debug\MvcDemo.Tests.dll.config
+D:\MvcDemo\MvcDemo\MvcDemo.Tests\bin\Debug\MvcDemo.Tests.dll
+D:\MvcDemo\MvcDemo\MvcDemo.Tests\bin\Debug\MvcDemo.Tests.pdb
+D:\MvcDemo\MvcDemo\MvcDemo.Tests\bin\Debug\MvcDemo.dll
+D:\MvcDemo\MvcDemo\MvcDemo.Tests\bin\Debug\Microsoft.Practices.Unity.dll
+D:\MvcDemo\MvcDemo\MvcDemo.Tests\bin\Debug\MvcDemo.Core.dll
+D:\MvcDemo\MvcDemo\MvcDemo.Tests\bin\Debug\MvcDemo.Dal.dll
+D:\MvcDemo\MvcDemo\MvcDemo.Tests\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+D:\MvcDemo\MvcDemo\MvcDemo.Tests\bin\Debug\MvcDemo.Common.dll
+D:\MvcDemo\MvcDemo\MvcDemo.Tests\bin\Debug\AutoMapper.dll
+D:\MvcDemo\MvcDemo\MvcDemo.Tests\bin\Debug\log4net.dll
+D:\MvcDemo\MvcDemo\MvcDemo.Tests\bin\Debug\MvcDemo.pdb
+D:\MvcDemo\MvcDemo\MvcDemo.Tests\bin\Debug\Microsoft.Practices.Unity.pdb
+D:\MvcDemo\MvcDemo\MvcDemo.Tests\bin\Debug\Microsoft.Practices.Unity.xml
+D:\MvcDemo\MvcDemo\MvcDemo.Tests\bin\Debug\MvcDemo.Core.pdb
+D:\MvcDemo\MvcDemo\MvcDemo.Tests\bin\Debug\MvcDemo.Dal.pdb
+D:\MvcDemo\MvcDemo\MvcDemo.Tests\bin\Debug\MvcDemo.Common.pdb
+D:\MvcDemo\MvcDemo\MvcDemo.Tests\obj\Debug\ResolveAssemblyReference.cache
+D:\MvcDemo\MvcDemo\MvcDemo.Tests\obj\Debug\MvcDemo.Tests.dll
+D:\MvcDemo\MvcDemo\MvcDemo.Tests\obj\Debug\MvcDemo.Tests.pdb
+C:\Users\dmohr\Documents\Personal\Sports Store Ecommerce\MvcDemo\MvcDemo.Tests\obj\Debug\MvcDemo.Tests.csprojResolveAssemblyReference.cache
+C:\Users\dmohr\Documents\Personal\Sports Store Ecommerce\MvcDemo\MvcDemo.Tests\obj\Debug\MvcDemo.Tests.dll
+C:\Users\dmohr\Documents\Personal\Sports Store Ecommerce\MvcDemo\MvcDemo.Tests\obj\Debug\MvcDemo.Tests.pdb

@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
-namespace MohrStore.SharedOperations
+namespace MvcDemo.Core.Interfaces
 {
-    public class Class1
+    public interface IFileModel
     {
     }
 }

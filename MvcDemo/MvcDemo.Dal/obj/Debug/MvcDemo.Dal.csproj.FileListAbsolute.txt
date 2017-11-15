@@ -1,0 +1,20 @@
+C:\Users\niroshl\documents\visual studio 2010\Projects\MvcDemo\MvcDemo.Dal\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\niroshl\documents\visual studio 2010\Projects\MvcDemo\MvcDemo.Dal\bin\Debug\MvcDemo.Dal.dll.config
+C:\Users\niroshl\documents\visual studio 2010\Projects\MvcDemo\MvcDemo.Dal\bin\Debug\MvcDemo.Dal.dll
+C:\Users\niroshl\documents\visual studio 2010\Projects\MvcDemo\MvcDemo.Dal\bin\Debug\MvcDemo.Dal.pdb
+C:\Users\niroshl\documents\visual studio 2010\Projects\MvcDemo\MvcDemo.Dal\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\niroshl\documents\visual studio 2010\Projects\MvcDemo\MvcDemo.Dal\obj\Debug\MvcDemo.Dal.dll
+C:\Users\niroshl\documents\visual studio 2010\Projects\MvcDemo\MvcDemo.Dal\obj\Debug\MvcDemo.Dal.pdb
+D:\MvcDemo\MvcDemo\MvcDemo.Dal\bin\Debug\MvcDemo.Dal.dll.config
+D:\MvcDemo\MvcDemo\MvcDemo.Dal\bin\Debug\MvcDemo.Dal.dll
+D:\MvcDemo\MvcDemo\MvcDemo.Dal\bin\Debug\MvcDemo.Dal.pdb
+D:\MvcDemo\MvcDemo\MvcDemo.Dal\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+D:\MvcDemo\MvcDemo\MvcDemo.Dal\obj\Debug\ResolveAssemblyReference.cache
+D:\MvcDemo\MvcDemo\MvcDemo.Dal\obj\Debug\MvcDemo.Dal.dll
+D:\MvcDemo\MvcDemo\MvcDemo.Dal\obj\Debug\MvcDemo.Dal.pdb
+C:\Users\dmohr\Documents\Personal\Sports Store Ecommerce\MvcDemo\MvcDemo.Dal\bin\Debug\MvcDemo.Dal.dll.config
+C:\Users\dmohr\Documents\Personal\Sports Store Ecommerce\MvcDemo\MvcDemo.Dal\bin\Debug\MvcDemo.Dal.dll
+C:\Users\dmohr\Documents\Personal\Sports Store Ecommerce\MvcDemo\MvcDemo.Dal\bin\Debug\MvcDemo.Dal.pdb
+C:\Users\dmohr\Documents\Personal\Sports Store Ecommerce\MvcDemo\MvcDemo.Dal\obj\Debug\MvcDemo.Dal.csprojResolveAssemblyReference.cache
+C:\Users\dmohr\Documents\Personal\Sports Store Ecommerce\MvcDemo\MvcDemo.Dal\obj\Debug\MvcDemo.Dal.dll
+C:\Users\dmohr\Documents\Personal\Sports Store Ecommerce\MvcDemo\MvcDemo.Dal\obj\Debug\MvcDemo.Dal.pdb

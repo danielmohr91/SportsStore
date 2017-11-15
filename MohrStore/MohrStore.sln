@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MohrStore.DataAccessLayer",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MohrStore.BusinessLogic", "MohrStore.BusinessLogic\MohrStore.BusinessLogic.csproj", "{82B1BF13-36F4-4FFB-8F17-168929CA0A5E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MohrStore.SharedOperations", "MohrStore.SharedOperations\MohrStore.SharedOperations.csproj", "{D1A966AA-FBFD-462B-AD61-2E90BA6BD066}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MohrStore.Common", "MohrStore.SharedOperations\MohrStore.Common.csproj", "{D1A966AA-FBFD-462B-AD61-2E90BA6BD066}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

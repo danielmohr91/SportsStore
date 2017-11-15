@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MvcDemoDalEFStoreContainer" CdmEntityContainer="DmsEntities">
+    <EntitySetMapping Name="DocFiles">
+      <EntityTypeMapping TypeName="MvcDemo.Dal.EF.DocFile">
+        <MappingFragment StoreEntitySet="DocFiles">
+          <ScalarProperty Name="FileId" ColumnName="FileId" />
+          <ScalarProperty Name="DocumentId" ColumnName="DocumentId" />
+          <ScalarProperty Name="DocName" ColumnName="DocName" />
+          <ScalarProperty Name="Sequence" ColumnName="Sequence" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Documents">
+      <EntityTypeMapping TypeName="MvcDemo.Dal.EF.Document">
+        <MappingFragment StoreEntitySet="Documents">
+          <ScalarProperty Name="DocumentId" ColumnName="DocumentId" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="UpdatedById" ColumnName="UpdatedById" />
+          <ScalarProperty Name="DocumentName" ColumnName="DocumentName" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="OwnerName" ColumnName="OwnerName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Keywords" ColumnName="Keywords" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FileVersions">
+      <EntityTypeMapping TypeName="MvcDemo.Dal.EF.FileVersion">
+        <MappingFragment StoreEntitySet="FileVersions">
+          <ScalarProperty Name="FileVersionId" ColumnName="FileVersionId" />
+          <ScalarProperty Name="FileId" ColumnName="FileId" />
+          <ScalarProperty Name="Path" ColumnName="Path" />
+          <ScalarProperty Name="Version" ColumnName="Version" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="AddedDate" ColumnName="AddedDate" />
+          <ScalarProperty Name="AddedBy" ColumnName="AddedBy" />
+          <ScalarProperty Name="AddedByName" ColumnName="AddedByName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RelatedDocuments">
+      <EntityTypeMapping TypeName="MvcDemo.Dal.EF.RelatedDocument">
+        <MappingFragment StoreEntitySet="RelatedDocuments">
+          <ScalarProperty Name="RelatedDocumentId" ColumnName="RelatedDocumentId" />
+          <ScalarProperty Name="MasterDocumentId" ColumnName="MasterDocumentId" />
+          <ScalarProperty Name="ChildDocumentId" ColumnName="ChildDocumentId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
