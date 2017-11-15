@@ -92,9 +92,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MohrStore\MohrStore.csproj">
+    <ProjectReference Include="..\MohrStore\MohrStore.Presentation.csproj">
       <Project>{82F83549-5639-431E-BF20-E707E8CE7A8F}</Project>
-      <Name>MohrStore</Name>
+      <Name>MohrStore.Presentation</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

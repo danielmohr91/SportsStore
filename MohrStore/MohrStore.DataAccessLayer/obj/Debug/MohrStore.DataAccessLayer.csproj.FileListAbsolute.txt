@@ -1,0 +1,4 @@
+C:\Users\dmohr\Documents\Personal\Sports Store Ecommerce\MohrStore\MohrStore.DataAccessLayer\bin\Debug\MohrStore.DataAccessLayer.dll
+C:\Users\dmohr\Documents\Personal\Sports Store Ecommerce\MohrStore\MohrStore.DataAccessLayer\bin\Debug\MohrStore.DataAccessLayer.pdb
+C:\Users\dmohr\Documents\Personal\Sports Store Ecommerce\MohrStore\MohrStore.DataAccessLayer\obj\Debug\MohrStore.DataAccessLayer.dll
+C:\Users\dmohr\Documents\Personal\Sports Store Ecommerce\MohrStore\MohrStore.DataAccessLayer\obj\Debug\MohrStore.DataAccessLayer.pdb

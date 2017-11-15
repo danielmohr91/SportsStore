@@ -1,0 +1,5 @@
+C:\Users\dmohr\Documents\Personal\Sports Store Ecommerce\MohrStore\MohrStore.BusinessLogic\bin\Debug\MohrStore.BusinessLogic.dll
+C:\Users\dmohr\Documents\Personal\Sports Store Ecommerce\MohrStore\MohrStore.BusinessLogic\bin\Debug\MohrStore.BusinessLogic.pdb
+C:\Users\dmohr\Documents\Personal\Sports Store Ecommerce\MohrStore\MohrStore.BusinessLogic\obj\Debug\MohrStore.BusinessLogic.csprojResolveAssemblyReference.cache
+C:\Users\dmohr\Documents\Personal\Sports Store Ecommerce\MohrStore\MohrStore.BusinessLogic\obj\Debug\MohrStore.BusinessLogic.dll
+C:\Users\dmohr\Documents\Personal\Sports Store Ecommerce\MohrStore\MohrStore.BusinessLogic\obj\Debug\MohrStore.BusinessLogic.pdb

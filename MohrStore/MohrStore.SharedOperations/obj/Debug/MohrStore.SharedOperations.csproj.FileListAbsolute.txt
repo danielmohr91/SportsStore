@@ -1,0 +1,4 @@
+C:\Users\dmohr\Documents\Personal\Sports Store Ecommerce\MohrStore\MohrStore.SharedOperations\bin\Debug\MohrStore.SharedOperations.dll
+C:\Users\dmohr\Documents\Personal\Sports Store Ecommerce\MohrStore\MohrStore.SharedOperations\bin\Debug\MohrStore.SharedOperations.pdb
+C:\Users\dmohr\Documents\Personal\Sports Store Ecommerce\MohrStore\MohrStore.SharedOperations\obj\Debug\MohrStore.SharedOperations.dll
+C:\Users\dmohr\Documents\Personal\Sports Store Ecommerce\MohrStore\MohrStore.SharedOperations\obj\Debug\MohrStore.SharedOperations.pdb
