@@ -1,0 +1,7 @@
+C:\Users\dmohr\Documents\Personal\Sports Store Ecommerce\MohrStore\PinnacleSsdt\bin\Debug\MohrStore.DataAccessLayer.Ssdt.dacpac
+C:\Users\dmohr\Documents\Personal\Sports Store Ecommerce\MohrStore\PinnacleSsdt\obj\Debug\Model.xml
+C:\Users\dmohr\Documents\Personal\Sports Store Ecommerce\MohrStore\PinnacleSsdt\obj\Debug\refactor.xml
+C:\Users\dmohr\Documents\Personal\Sports Store Ecommerce\MohrStore\PinnacleSsdt\obj\Debug\postdeploy.sql
+C:\Users\dmohr\Documents\Personal\Sports Store Ecommerce\MohrStore\PinnacleSsdt\obj\Debug\predeploy.sql
+C:\Users\dmohr\Documents\Personal\Sports Store Ecommerce\MohrStore\PinnacleSsdt\obj\Debug\PinnacleSsdt.dll
+C:\Users\dmohr\Documents\Personal\Sports Store Ecommerce\MohrStore\PinnacleSsdt\obj\Debug\PinnacleSsdt.pdb

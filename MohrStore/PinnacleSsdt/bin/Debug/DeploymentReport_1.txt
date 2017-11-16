@@ -1,0 +1,18 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       [dbo].[Nurse]
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Table rebuild
+       [dbo].[Nurse] (Table)
+     Create
+       [dbo].[FK_Nurse_Address] (Foreign Key)
+       [dbo].[FK_Company_Address] (Foreign Key)
+
+** Supporting actions

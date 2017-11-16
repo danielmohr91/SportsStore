@@ -1,0 +1,30 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Create
+       [dbo].[Addresses] (Table)
+       [dbo].[AspNetRoles] (Table)
+       [dbo].[AspNetUserClaims] (Table)
+       [dbo].[AspNetUserLogins] (Table)
+       [dbo].[AspNetUserRoles] (Table)
+       [dbo].[AspNetUsers] (Table)
+       [dbo].[C__MigrationHistory] (Table)
+       [dbo].[Companies] (Table)
+       [dbo].[Nurses] (Table)
+       Default Constraint: unnamed constraint on [dbo].[Nurses] (Default Constraint)
+       [dbo].[FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId] (Foreign Key)
+       [dbo].[FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId] (Foreign Key)
+       [dbo].[FK_AspNetUserRoles_AspNetRoles] (Foreign Key)
+       [dbo].[FK_AspNetUserRoles_AspNetUsers] (Foreign Key)
+       [dbo].[FK_Company_Address] (Foreign Key)
+       [dbo].[FK_Nurse_Address] (Foreign Key)
+
+** Supporting actions

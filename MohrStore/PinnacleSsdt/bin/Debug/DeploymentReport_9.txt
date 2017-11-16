@@ -1,0 +1,61 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       [dbo].[Nurses]
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       The column [dbo].[Nurses].[AddressId] is being dropped, data loss could occur.
+       The column [dbo].[Nurses].[Name] is being dropped, data loss could occur.
+       The column [dbo].[Nurses].[NurseRateId] is being dropped, data loss could occur.
+       The column [dbo].[Nurses].[UserInfoId] on table [dbo].[Nurses] must be added, but the column has no default value and
+         does not allow NULL values. If the table contains data, the ALTER script will not work. To avoid this issue you must
+         either: add a default value to the column, mark it as allowing NULL values, or enable the generation of smart-defaults
+         as a deployment option.
+
+** User actions
+     Rename
+       [dbo].[Nurses].[NurseRateId] (Column)
+       [dbo].[Nurses].[NurseId] (Column)
+     Drop
+       unnamed constraint on [dbo].[Nurses] (Default Constraint)
+       [dbo].[FK_Nurse_Address] (Foreign Key)
+     Alter
+       [dbo].[Addresses] (Table)
+     Table rebuild
+       [dbo].[Nurses] (Table)
+     Create
+       [dbo].[HospitalRates] (Table)
+       [dbo].[Hospitals] (Table)
+       [dbo].[Notes] (Table)
+       [dbo].[NurseRates] (Table)
+       [dbo].[TaxRates] (Table)
+       [dbo].[UserInfos] (Table)
+       [dbo].[DF_UserInfos_UserInfoId] (Default Constraint)
+       [dbo].[FK_Nurse_UserInfo] (Foreign Key)
+       [dbo].[FK_Nurse_Note] (Foreign Key)
+       [dbo].[FK_HospitalRate_TaxRate] (Foreign Key)
+       [dbo].[FK_HospitalRate_Hospital] (Foreign Key)
+       [dbo].[FK_HospitalRate_Note] (Foreign Key)
+       [dbo].[FK_Hospital_Address] (Foreign Key)
+       [dbo].[FK_Hospital_Contact] (Foreign Key)
+       [dbo].[FK_Hospital_Note] (Foreign Key)
+       [dbo].[FK_Note_CreatedBy] (Foreign Key)
+       [dbo].[FK_Note_ModifiedBy] (Foreign Key)
+       [dbo].[FK_NurseRate_Nurse] (Foreign Key)
+       [dbo].[FK_NurseRate_HospitalRate] (Foreign Key)
+       [dbo].[FK_NurseRate_TaxRate] (Foreign Key)
+       [dbo].[FK_NurseRate_Note] (Foreign Key)
+       [dbo].[FK_UserInfos_Address] (Foreign Key)
+       [dbo].[FK_UserInfo_Note] (Foreign Key)
+       [dbo].[FK_Address_Note] (Foreign Key)
+
+** Supporting actions
+
+The column [dbo].[Nurses].[AddressId] is being dropped, data loss could occur.
+The column [dbo].[Nurses].[Name] is being dropped, data loss could occur.
+The column [dbo].[Nurses].[NurseRateId] is being dropped, data loss could occur.
+The column [dbo].[Nurses].[UserInfoId] on table [dbo].[Nurses] must be added, but the column has no default value and does not allow NULL values. If the table contains data, the ALTER script will not work. To avoid this issue you must either: add a default value to the column, mark it as allowing NULL values, or enable the generation of smart-defaults as a deployment option.
+The column NurseId on table [dbo].[Nurses] must be changed from NULL to NOT NULL. If the table contains data, the ALTER script may not work. To avoid this issue, you must add values to this column for all rows or mark it as allowing NULL values, or enable the generation of smart-defaults as a deployment option.
+
