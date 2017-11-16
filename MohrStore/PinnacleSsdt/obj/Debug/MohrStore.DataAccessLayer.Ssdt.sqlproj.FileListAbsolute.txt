@@ -5,3 +5,5 @@ C:\Users\dmohr\Documents\Personal\Sports Store Ecommerce\MohrStore\PinnacleSsdt\
 C:\Users\dmohr\Documents\Personal\Sports Store Ecommerce\MohrStore\PinnacleSsdt\obj\Debug\predeploy.sql
 C:\Users\dmohr\Documents\Personal\Sports Store Ecommerce\MohrStore\PinnacleSsdt\obj\Debug\PinnacleSsdt.dll
 C:\Users\dmohr\Documents\Personal\Sports Store Ecommerce\MohrStore\PinnacleSsdt\obj\Debug\PinnacleSsdt.pdb
+C:\Users\dmohr\Documents\Personal\Sports Store Ecommerce\MohrStore\PinnacleSsdt\bin\Debug\PinnacleSsdt.dll
+C:\Users\dmohr\Documents\Personal\Sports Store Ecommerce\MohrStore\PinnacleSsdt\bin\Debug\PinnacleSsdt.pdb

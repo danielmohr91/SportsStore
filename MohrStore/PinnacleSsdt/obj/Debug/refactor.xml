@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0">
+  <Operation Name="Rename Refactor" Key="1ed7dfda-fa57-4aa3-9f43-975a49973c46" ChangeDateTime="10/30/2017 16:16:24" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+    <Property Name="ElementName" Value="[dbo].[Nurse].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Nurse]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="NurseId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="2eb96f90-f298-4f4d-aa71-fbe44e163a24" ChangeDateTime="10/30/2017 16:18:29" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+    <Property Name="ElementName" Value="[dbo].[Nurse].[NurseId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Nurse]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="AddressId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="68af4a8f-a0b6-4b16-aef0-f779d85f1716" ChangeDateTime="10/30/2017 16:19:11" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+    <Property Name="ElementName" Value="[dbo].[Nurse].[Street1]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Nurse]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="State" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="bc4833e6-507b-4315-8c3c-6fe0920d5b7f" ChangeDateTime="10/30/2017 16:19:15" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+    <Property Name="ElementName" Value="[dbo].[Nurse].[Street1]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Nurse]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ZIP" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="ffe8c1b5-74e1-416f-884e-9bdb275eb33c" ChangeDateTime="10/30/2017 16:19:32" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+    <Property Name="ElementName" Value="[dbo].[Nurse].[ZIP]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Nurse]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Zip" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="1c3b67bb-21ac-462b-a52b-fed5f5ad69e3" ChangeDateTime="11/03/2017 16:56:54" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+    <Property Name="ElementName" Value="[dbo].[Nurses].[CompanyId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Nurses]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="UserUnfo" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="bfe16920-5d6d-4bad-964d-dbc4e373c306" ChangeDateTime="11/03/2017 16:56:59" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+    <Property Name="ElementName" Value="[dbo].[Nurses].[UserUnfo]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Nurses]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="UserUnfoId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="34db713b-c90d-41f5-8c0c-7984eada8793" ChangeDateTime="11/03/2017 16:57:05" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+    <Property Name="ElementName" Value="[dbo].[Nurses].[UserUnfoId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Nurses]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="UserInfoId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="d95e015c-6881-4635-929b-3c3939118f7c" ChangeDateTime="11/03/2017 17:00:45" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+    <Property Name="ElementName" Value="[dbo].[Nurses].[NurseId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Nurses]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="NurseRateId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="ce86c1df-63df-44a9-8e8b-148648517a1b" ChangeDateTime="11/03/2017 17:01:17" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+    <Property Name="ElementName" Value="[dbo].[Nurses].[UserInfoId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Nurses]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="NurseId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="f920f24e-56b2-405f-880e-8ffa26e612e9" ChangeDateTime="11/04/2017 01:24:48" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+    <Property Name="ElementName" Value="[dbo].[NurseRates].[WeeklyHours]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[NurseRates]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="HoursePerWeek" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="592bc38e-0797-4a4e-ac34-7648686f9352" ChangeDateTime="11/05/2017 02:13:21" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+    <Property Name="ElementName" Value="[dbo].[NurseRates].[HoursePerWeek]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[NurseRates]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="HoursPerWeek" />
+  </Operation>
+</Operations>

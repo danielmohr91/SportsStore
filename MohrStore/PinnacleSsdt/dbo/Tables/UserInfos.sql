@@ -14,6 +14,6 @@
     [SocialSecurityNumber]  NVARCHAR(15)     NULL,
     [NoteId]                UniqueIdentifier NULL,
     CONSTRAINT [PK_UserInfos] PRIMARY KEY CLUSTERED ([UserInfoId] ASC) WITH (FILLFACTOR = 80),
-    CONSTRAINT [FK_UserInfos_Address] FOREIGN KEY ([AddressID]) REFERENCES [dbo].[Addresses] ([AddressId]),
-    CONSTRAINT [FK_UserInfo_Note] FOREIGN KEY ([NoteId]) REFERENCES [dbo].[Notes] ([NoteId])
+    CONSTRAINT [FK_UserInfos_Address] FOREIGN KEY ([AddressId]) REFERENCES [dbo].[Addresses] ([AddressId]),
+    CONSTRAINT [FK_UserInfo_Note] FOREIGN KEY ([NoteId]) REFERENCES [dbo].[Note] ([NoteId])
 );
